@@ -1,0 +1,18 @@
+acl "allow_networks" {
+	127.0.0.0/8; 
+	192.168.57.0/24;
+};
+
+options {
+	recursion yes;
+	directory "/var/cache/bind";
+	dnssec-validation yes;
+	listen-on { any; };
+	listen-on-v6 { none; };
+
+	forwarders {
+		208.67.222.222;  
+	};
+
+	forward only; 
+	};

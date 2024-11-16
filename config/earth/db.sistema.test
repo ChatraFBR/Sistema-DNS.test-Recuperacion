@@ -1,0 +1,25 @@
+$TTL    604800
+@       IN      SOA     tierra.sistema.test. admin.sistema.test. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                           7200 )       ; Negative Cache TTL
+
+;Name server record (NS)
+@       IN      NS      tierra.sistema.test.
+
+;Addres record (A)
+mercurio    IN      A       192.168.57.101
+venus   IN      A       192.168.57.102
+@       IN      A       192.168.57.103
+tierra	IN	    A	      192.168.57.103
+marte   IN      A       192.168.57.104
+
+; Alias (CNAME)
+ns1     IN      CNAME   tierra.sistema.test.
+ns2     IN      CNAME   venus.sistema.test.
+mail    IN      CNAME   marte.sistema.test.
+
+; Mail Exchange (MX)
+@       IN      MX 10   marte

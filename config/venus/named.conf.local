@@ -1,0 +1,11 @@
+zone "sistema.test" {
+        type slave; # Slave
+        file "/etc/bind/zones/db.sistema.test"; # Directory which server databse is save
+        masters { 192.168.57.103; }; # IP DNS master
+};
+
+zone "57.168.192.in-addr.arpa" {
+        type slave; # Slave
+        file "/etc/bind/zones/db.192.168.57"; # Directory which server databse is save
+        masters { 192.168.57.103; }; # IP DNS master
+};
