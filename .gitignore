@@ -1,0 +1,12 @@
+#This ignore vagrant directory
+.vagrant/
+
+#This ignore backup directory
+backup/
+
+#This ignore backup files
+*.bak
+*.swp
+*.tmp
+*.old
+*.save
